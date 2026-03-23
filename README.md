@@ -1,0 +1,2 @@
+# localstock
+oflıne stock
