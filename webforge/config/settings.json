@@ -1,0 +1,26 @@
+{
+  "uygulama": {
+    "ad": "WebForge AI Engine",
+    "versiyon": "1.0",
+    "port": 7000,
+    "host": "0.0.0.0",
+    "debug": false,
+    "secret_key": "webforge-secret-change-this-in-production"
+  },
+  "ai": {
+    "openai_api_key": "",
+    "model": "gpt-4",
+    "sicaklik": 0.7,
+    "max_token": 2000
+  },
+  "siteler": [],
+  "scraper": {
+    "timeout": 30,
+    "max_sayfa": 50,
+    "gorsel_indir": true,
+    "bekleme": 2
+  },
+  "zamanlama": {
+    "aktif": false
+  }
+}
