@@ -1,0 +1,69 @@
+{
+  "uygulama": {
+    "ad": "MedAjan v21.00",
+    "versiyon": "21.00",
+    "isletme_adi": "Med Tuning",
+    "sehir": "Diyarbakır",
+    "telefon": "",
+    "email": "",
+    "web_port": 8000,
+    "gui_aktif": true,
+    "web_aktif": true,
+    "dil": "tr"
+  },
+  "yapay_zeka": {
+    "model": "dahili",
+    "openai_api_key": "",
+    "anthropic_api_key": "",
+    "sicaklik": 0.7,
+    "max_token": 500,
+    "otomatik_yanit": true,
+    "yanit_gecikmesi": 3,
+    "yanit_gecikmesi_max": 10
+  },
+  "instagram": {
+    "kullanici_adi": "",
+    "sifre": "",
+    "aktif": false,
+    "proxy": "",
+    "cookie_dosyasi": "data/instagram_cookies.json",
+    "dm_otomatik_yanit": true,
+    "yorum_otomatik_yanit": true,
+    "story_zamanlama": true
+  },
+  "facebook": {
+    "page_id": "",
+    "access_token": "",
+    "aktif": false,
+    "dm_otomatik_yanit": true,
+    "yorum_otomatik_yanit": true
+  },
+  "whatsapp": {
+    "aktif": false,
+    "telefon": "",
+    "session_dosyasi": "data/whatsapp_session",
+    "timeout": 300,
+    "otomatik_yanit": true
+  },
+  "tiktok": {
+    "kullanici_adi": "",
+    "aktif": false,
+    "yorum_otomatik_yanit": true
+  },
+  "zamanlama": {
+    "dm_kontrol_suresi": 60,
+    "yorum_kontrol_suresi": 120,
+    "story_kontrol_suresi": 3600,
+    "rapor_suresi": 86400
+  },
+  "veritabani": {
+    "tip": "sqlite",
+    "dosya": "data/medajan.db"
+  },
+  "log": {
+    "seviye": "INFO",
+    "dosya": "logs/medajan.log",
+    "max_boyut": "10MB",
+    "yedek_sayisi": 5
+  }
+}
