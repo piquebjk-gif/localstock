@@ -1,0 +1,493 @@
+/*
+Theme Name:  IQ Elektronik Child
+Template:    electro
+Version:     1.0.0
+Description: İQ Elektronik — Elektro teması child theme. Teknolojide Akıllı Tercih.
+Author:      IQ Elektronik
+Text Domain: iq-child
+*/
+
+/* ── Temel Renk Değişkenleri ─────────────────────────────────────────── */
+:root {
+  --iq-sari:         #FDD700;
+  --iq-sari-koyu:    #EFCA00;
+  --iq-koyu:         #333E48;
+  --iq-koyu2:        #2C3E50;
+  --iq-beyaz:        #FFFFFF;
+  --iq-acik:         #F8F9FA;
+  --iq-gri:          #6C757D;
+  --iq-sinir:        #E9ECEF;
+  --iq-kirmizi:      #DC3545;
+  --iq-yesil:        #28A745;
+  --iq-radius:       6px;
+  --iq-gecis:        all 0.25s ease;
+  --iq-golge:        0 2px 12px rgba(0,0,0,0.10);
+  --iq-golge-hover:  0 6px 24px rgba(0,0,0,0.16);
+}
+
+/* ── Genel Reset ──────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: 14px;
+  color: var(--iq-koyu);
+  background: var(--iq-beyaz);
+}
+
+@media (max-width: 991px) {
+  body { padding-bottom: 64px; }
+}
+
+a { transition: var(--iq-gecis); }
+img { max-width: 100%; height: auto; }
+
+/* ── Ana Renk Override (Elektro #F7C100 → IQ Sarı) ──────────────────── */
+.btn-primary,
+.electro-btn,
+a.button.add_to_cart_button,
+button.single_add_to_cart_button,
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #payment #place_order {
+  background-color: var(--iq-sari) !important;
+  border-color: var(--iq-sari) !important;
+  color: var(--iq-koyu) !important;
+  font-weight: 600;
+}
+
+.btn-primary:hover,
+.electro-btn:hover,
+a.button.add_to_cart_button:hover,
+button.single_add_to_cart_button:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover {
+  background-color: var(--iq-sari-koyu) !important;
+  border-color: var(--iq-sari-koyu) !important;
+}
+
+/* ── Header ──────────────────────────────────────────────────────────── */
+.site-header,
+.electro-header {
+  background: var(--iq-beyaz);
+  border-bottom: 2px solid var(--iq-sari);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: var(--iq-golge);
+}
+
+.site-branding .site-title a,
+.navbar-brand {
+  color: var(--iq-koyu) !important;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.site-description,
+.iq-slogan {
+  color: var(--iq-gri);
+  font-size: 11px;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* ── Top Bar ──────────────────────────────────────────────────────────── */
+.top-bar,
+.electro-topbar {
+  background: var(--iq-koyu);
+  color: #ccc;
+  font-size: 12px;
+  padding: 6px 0;
+}
+
+.top-bar a,
+.electro-topbar a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.top-bar a:hover,
+.electro-topbar a:hover {
+  color: var(--iq-sari);
+}
+
+.iq-topbar-kargo {
+  color: var(--iq-sari);
+  font-weight: 600;
+}
+
+/* ── Navigasyon ───────────────────────────────────────────────────────── */
+.navbar,
+.electro-navigation,
+.main-navigation {
+  background: var(--iq-beyaz);
+  border-top: 1px solid var(--iq-sinir);
+}
+
+.navbar-nav > li > a,
+.main-navigation ul li a {
+  color: var(--iq-koyu) !important;
+  font-weight: 500;
+  padding: 12px 16px;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li.current-menu-item > a {
+  color: var(--iq-sari) !important;
+}
+
+.departments-toggle,
+.iq-tum-kategoriler {
+  background: var(--iq-sari);
+  color: var(--iq-koyu);
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: var(--iq-radius);
+  border: none;
+  cursor: pointer;
+}
+
+.departments-toggle:hover {
+  background: var(--iq-sari-koyu);
+}
+
+/* ── Arama Formu ──────────────────────────────────────────────────────── */
+.searchform,
+.electro-search-form,
+.iq-arama {
+  display: flex;
+  border: 2px solid var(--iq-sinir);
+  border-radius: var(--iq-radius);
+  overflow: hidden;
+  transition: var(--iq-gecis);
+}
+
+.searchform:focus-within,
+.iq-arama:focus-within {
+  border-color: var(--iq-sari);
+}
+
+.searchform input[type="text"],
+.searchform input[type="search"],
+.iq-arama input {
+  border: none;
+  padding: 12px 16px;
+  flex: 1;
+  font-size: 14px;
+  outline: none;
+}
+
+.searchform button,
+.iq-arama button {
+  background: var(--iq-sari);
+  border: none;
+  padding: 12px 20px;
+  color: var(--iq-koyu);
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--iq-gecis);
+}
+
+.searchform button:hover,
+.iq-arama button:hover {
+  background: var(--iq-sari-koyu);
+}
+
+/* ── Ürün Kartları ────────────────────────────────────────────────────── */
+.product,
+.woocommerce ul.products li.product {
+  border: 1px solid var(--iq-sinir);
+  border-radius: var(--iq-radius);
+  background: var(--iq-beyaz);
+  transition: var(--iq-gecis);
+  overflow: hidden;
+  position: relative;
+}
+
+.product:hover,
+.woocommerce ul.products li.product:hover {
+  box-shadow: var(--iq-golge-hover);
+  transform: translateY(-3px);
+}
+
+.woocommerce ul.products li.product .price {
+  color: var(--iq-koyu);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.woocommerce ul.products li.product .price del {
+  color: var(--iq-gri);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.woocommerce ul.products li.product .price ins {
+  color: var(--iq-kirmizi);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.woocommerce span.onsale {
+  background: var(--iq-kirmizi);
+  color: #fff;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  top: 10px;
+  left: 10px;
+  right: auto;
+  min-height: auto;
+  line-height: 1.4;
+}
+
+/* Star Rating */
+.woocommerce .star-rating span::before,
+.woocommerce .star-rating::before {
+  color: var(--iq-sari);
+}
+
+/* ── Sepet Sayacı (Header) ─────────────────────────────────────────────── */
+.cart-contents .count,
+.electro-cart-count,
+.iq-cart-badge {
+  background: var(--iq-kirmizi);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* ── Bölüm Başlıkları ─────────────────────────────────────────────────── */
+.woocommerce-loop-category__title,
+.section-title,
+.widget-title,
+.iq-section-baslik {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--iq-koyu);
+  border-bottom: 3px solid var(--iq-sari);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+/* ── Banner / Hero ────────────────────────────────────────────────────── */
+.iq-hero,
+.rev_slider_wrapper {
+  background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
+  border-radius: 0;
+}
+
+/* ── Ücretsiz Kargo Banner ───────────────────────────────────────────── */
+.iq-kargo-banner {
+  background: var(--iq-sari);
+  color: var(--iq-koyu);
+  text-align: center;
+  padding: 8px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* ── Footer ──────────────────────────────────────────────────────────── */
+.site-footer,
+.electro-footer,
+.footer-container {
+  background: var(--iq-koyu);
+  color: #ccc;
+}
+
+.site-footer a,
+.electro-footer a,
+.footer-container a {
+  color: #ccc;
+  text-decoration: none;
+  transition: var(--iq-gecis);
+}
+
+.site-footer a:hover,
+.electro-footer a:hover,
+.footer-container a:hover {
+  color: var(--iq-sari);
+}
+
+.widget-title,
+.footer-widget-title {
+  color: var(--iq-sari) !important;
+}
+
+.footer-bottom-bar,
+.site-info {
+  background: var(--iq-koyu2);
+  color: #888;
+  font-size: 12px;
+  padding: 15px 0;
+  border-top: 1px solid #3d4f62;
+}
+
+/* ── Sosyal Medya İkonları ───────────────────────────────────────────── */
+.iq-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: var(--iq-sari);
+  color: var(--iq-koyu);
+  border-radius: 50%;
+  margin-right: 6px;
+  font-size: 14px;
+  transition: var(--iq-gecis);
+}
+
+.iq-social a:hover {
+  background: var(--iq-sari-koyu);
+  transform: translateY(-2px);
+}
+
+/* ── WooCommerce Sayfa ───────────────────────────────────────────────── */
+.woocommerce .woocommerce-breadcrumb {
+  background: var(--iq-acik);
+  padding: 10px 15px;
+  border-radius: var(--iq-radius);
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
+  color: var(--iq-kirmizi);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+  color: var(--iq-koyu);
+  border-bottom-color: var(--iq-sari);
+}
+
+/* ── Pagination ──────────────────────────────────────────────────────── */
+.woocommerce nav.woocommerce-pagination ul li a,
+.woocommerce nav.woocommerce-pagination ul li span {
+  border-color: var(--iq-sinir);
+  color: var(--iq-koyu);
+}
+
+.woocommerce nav.woocommerce-pagination ul li a:hover,
+.woocommerce nav.woocommerce-pagination ul li span.current {
+  background: var(--iq-sari);
+  color: var(--iq-koyu);
+  border-color: var(--iq-sari);
+}
+
+/* ── Form Elementleri ────────────────────────────────────────────────── */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+  border: 1px solid var(--iq-sinir);
+  border-radius: var(--iq-radius);
+  padding: 10px 14px;
+  font-size: 14px;
+  transition: var(--iq-gecis);
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--iq-sari);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(253, 215, 0, 0.15);
+}
+
+/* ── WooCommerce Notices ──────────────────────────────────────────────── */
+.woocommerce-message {
+  border-top-color: var(--iq-sari) !important;
+  background: #FFFDE7;
+}
+
+.woocommerce-error {
+  border-top-color: var(--iq-kirmizi) !important;
+}
+
+.woocommerce-info {
+  border-top-color: #17A2B8 !important;
+}
+
+/* ── Tooltip ─────────────────────────────────────────────────────────── */
+.iq-tooltip {
+  position: relative;
+}
+.iq-tooltip::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--iq-koyu);
+  color: #fff;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.iq-tooltip:hover::after {
+  opacity: 1;
+}
+
+/* ── Skeleton Loader ─────────────────────────────────────────────────── */
+.iq-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: iqSkeletonLoad 1.5s infinite;
+  border-radius: var(--iq-radius);
+}
+@keyframes iqSkeletonLoad {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── Animasyonlar ────────────────────────────────────────────────────── */
+@keyframes iqFadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.iq-fade-up { animation: iqFadeUp 0.4s ease both; }
+
+@keyframes iqBounce {
+  0%,100% { transform: translateY(0); }
+  40%     { transform: translateY(-10px); }
+  60%     { transform: translateY(-5px); }
+}
+.iq-bounce { animation: iqBounce 0.6s ease; }
+
+/* ── Responsive ──────────────────────────────────────────────────────── */
+@media (max-width: 991px) {
+  .iq-desktop-only { display: none !important; }
+  .top-bar, .electro-topbar { display: none; }
+  .site-header { padding: 10px 0; }
+}
+@media (min-width: 992px) {
+  .iq-mobile-only { display: none !important; }
+}
+@media (max-width: 575px) {
+  .woocommerce ul.products li.product { width: 48%; }
+  body { font-size: 13px; }
+}
