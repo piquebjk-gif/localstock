@@ -15,6 +15,7 @@ data/story_zamanlama.json
 logs/
 media/
 .env
+team-onboarding/config.json
 *.egg-info/
 dist/
 build/

@@ -13,7 +13,17 @@
     "sicaklik": 0.7,
     "max_token": 2000
   },
-  "siteler": [],
+  "siteler": [
+    {
+      "ad": "IQ Elektronik",
+      "url": "https://www.iqelektronik.com",
+      "kullanici": "uym21",
+      "uygulama_sifresi": "ddxU avXX TM7O tlFv uz2t Q05M",
+      "wc_key": "ck_810f148a72c3db8c8493861dc938df7c6d1ebac7",
+      "wc_secret": "cs_1ab1d0df9434da297be4bb54cd4d2c39638be24b",
+      "aktif": true
+    }
+  ],
   "scraper": {
     "timeout": 30,
     "max_sayfa": 50,

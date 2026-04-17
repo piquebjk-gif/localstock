@@ -165,7 +165,7 @@ class WPEngine:
         """Yerel dosyayı WordPress'e yükle."""
         dosya = Path(dosya_yolu)
         if not dosya.exists():
-            return {"hata": f"Dosya bulunamadı: dosya_yolu"}
+            return {"hata": f"Dosya bulunamadı: {dosya_yolu}"}
         mime = mimetypes.guess_type(dosya_yolu)[0] or "image/jpeg"
         headers_old = self.ses.headers.copy()
         self.ses.headers.pop("Content-Type", None)
@@ -182,7 +182,7 @@ class WPEngine:
             sonuc = r.json()
             if baslik or alt_metin:
                 guncelle = {}
-                if baslik:    guncelle["title"] = {"rendered": baslik}
+                if baslik:    guncelle["title"] = {"raw": baslik}
                 if alt_metin: guncelle["alt_text"] = alt_metin
                 self._put(f"{self.api}/media/{sonuc['id']}", guncelle)
             return sonuc
@@ -430,18 +430,22 @@ class WPEngine:
 
     def site_ozeti_al(self) -> dict:
         try:
-            yazilar   = len(self.yazilar_listele(adet=1))
-            sayfalar  = len(self.sayfalar_listele(adet=1))
-            medya     = len(self.medya_listele(adet=1))
-            kategoriler = len(self.kategoriler_listele(adet=1))
-            ayarlar   = self.site_ayarlarini_al()
+            ayarlar = self.site_ayarlarini_al()
+
+            def _toplam_say(endpoint: str) -> int:
+                try:
+                    r = self.ses.get(endpoint, params={"per_page": 1}, timeout=10)
+                    return int(r.headers.get("X-WP-Total", 0))
+                except Exception:
+                    return 0
+
             return {
-                "site_adi":    ayarlar.get("title", ""),
-                "site_url":    self.base,
-                "yazi_sayisi": yazilar,
-                "sayfa_sayisi": sayfalar,
-                "medya_sayisi": medya,
-                "kategori_sayisi": kategoriler,
+                "site_adi":       ayarlar.get("title", ""),
+                "site_url":       self.base,
+                "yazi_sayisi":    _toplam_say(f"{self.api}/posts"),
+                "sayfa_sayisi":   _toplam_say(f"{self.api}/pages"),
+                "medya_sayisi":   _toplam_say(f"{self.api}/media"),
+                "kategori_sayisi": _toplam_say(f"{self.api}/categories"),
             }
         except Exception as e:
             return {"hata": str(e)}
