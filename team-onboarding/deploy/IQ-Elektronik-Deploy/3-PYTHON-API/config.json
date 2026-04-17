@@ -1,0 +1,28 @@
+{
+  "site": {
+    "url": "https://www.iqelektronik.com",
+    "kullanici": "uym21",
+    "uygulama_sifresi": "ddxU avXX TM7O tlFv uz2t Q05M"
+  },
+  "woocommerce": {
+    "consumer_key": "ck_810f148a72c3db8c8493861dc938df7c6d1ebac7",
+    "consumer_secret": "cs_1ab1d0df9434da297be4bb54cd4d2c39638be24b"
+  },
+  "firma": {
+    "ad": "İQ Elektronik",
+    "slogan": "Teknolojide Akıllı Tercih",
+    "adres": "Yenidoğan, Kızılay Sokağı No:41, 34040 Bayrampaşa/İstanbul",
+    "telefon": "0544 440 56 77",
+    "instagram": "https://www.instagram.com/iqelektronik/",
+    "facebook": "https://www.facebook.com/iqelectroniks/"
+  },
+  "kategoriler": [
+    {"isim": "Telefon & Tablet", "slug": "telefon-tablet"},
+    {"isim": "Bilgisayar & Laptop", "slug": "bilgisayar-laptop"},
+    {"isim": "Ev Elektroniği", "slug": "ev-elektronigi"},
+    {"isim": "Ses Sistemleri", "slug": "ses-sistemleri"},
+    {"isim": "Aksesuarlar", "slug": "aksesuarlar"},
+    {"isim": "Kamera & Fotoğraf", "slug": "kamera-fotograf"}
+  ],
+  "gorseller_klasoru": "C:\\Users\\User\\Desktop\\OtoGorseller"
+}

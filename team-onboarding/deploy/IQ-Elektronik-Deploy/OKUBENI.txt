@@ -1,0 +1,75 @@
+╔══════════════════════════════════════════════════════════════╗
+║          İQ ELEKTRONİK — DEPLOY PAKETİ                     ║
+║          Teknolojide Akıllı Tercih                           ║
+╚══════════════════════════════════════════════════════════════╝
+
+Bu pakette 4 klasör var. En hızlı yöntem: 1-CPANEL-YUKLE klasörü.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+YOL 1 — CPANEL / DOSYA YÖNETİCİSİ (Önerilen - En Hızlı)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. cPanel'e giriş yap
+2. Dosya Yöneticisi → public_html/ klasörünü aç
+3. "1-CPANEL-YUKLE" klasöründeki 2 dosyayı yükle:
+   • iq-installer.php
+   • iq-elektronik-child.zip
+4. Tarayıcıda aç:
+   https://www.iqelektronik.com/iq-installer.php?secret=iq2024
+5. "TAM KURULUMU BAŞLAT" butonuna tıkla
+6. Bitti! Sayfanın altındaki "Bu Dosyayı Sil" butonuna bas.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+YOL 2 — LOCAL BY FLYWHEEL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Local'da sitenin klasörünü bul:
+   C:\Users\[KullaniciAdi]\Local Sites\[site-adi]\app\public\
+2. "1-CPANEL-YUKLE" klasöründeki 2 dosyayı oraya kopyala
+3. Tarayıcıda aç (Local'daki URL'yi kullan, örnek):
+   http://iqelektronik.local/iq-installer.php?secret=iq2024
+4. Kurulum yap → bitti!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+YOL 3 — WP ADMIN'DEN TEMA YÜKLEME (sadece tema)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. WP Admin → Görünüm → Temalar → Tema Ekle → Tema Yükle
+2. "2-WP-TEMA/iq-elektronik-child.zip" dosyasını seç
+3. Yükle ve Aktive Et
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+YOL 4 — WP-CLI (gelişmiş kullanıcılar)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+"4-WP-CLI/wp-cli-komutlari.sh" dosyasındaki komutları
+cPanel SSH veya Local'ın terminali üzerinden çalıştır.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+KURULUM ARACININ YAPTIĞI İŞLEMLER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Site adı: İQ Elektronik — Teknolojide Akıllı Tercih
+✓ WooCommerce: ₺ TRY, KDV %20 dahil, AJAX sepet
+✓ Sayfalar: Ana Sayfa, Mağaza, Sepet, Ödeme, Hesabım,
+            Hakkımızda, İletişim, Gizlilik, KVKK
+✓ Kategoriler: Telefon, Laptop, Ev Elektroniği, Ses,
+               Kamera, Aksesuar, Akıllı Saat, Oyun
+✓ Kargo: Standart 29,90₺ + Ücretsiz (500₺+)
+✓ Vergi: KDV %20 — Türkiye
+✓ Kupon: IQ50 (50₺ indirim, min 200₺, tek kullanım)
+✓ Child Tema: İQ Elektronik Electro child — aktive edilir
+✓ Menü: Ana menü oluşturulur ve atanır
+✓ SEO: Yoast ayarları (eğer yüklüyse)
+✓ Temizlik: Örnek içerik silinir, önbellek sıfırlanır
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FİRMA BİLGİLERİ
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+İQ Elektronik
+Teknolojide Akıllı Tercih
+Yenidoğan, Kızılay Sokağı No:41, 34040 Bayrampaşa/İstanbul
+Tel: 0544 440 56 77
+Instagram: @iqelektronik
+Facebook: /iqelectroniks
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GÜVENLİK UYARISI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Kurulum bittikten sonra iq-installer.php dosyasını
+MUTLAKA sunucudan silin!
